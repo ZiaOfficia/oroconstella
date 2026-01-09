@@ -11,6 +11,7 @@
   <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -34,11 +35,14 @@
     </div>          
 
     <nav class="hidden md:flex gap-8 text-sm font-medium flex-1 justify-center">
-      <a href="#" class="hover:text-yellow-400 transition-colors">Overview</a>
-      <a href="#" class="hover:text-yellow-400 transition-colors">Amenities</a>
+      <a href="#" class="hover:text-yellow-400 transition-colors">Home</a>
+      <a href="#about" class="hover:text-yellow-400 transition-colors">About us</a>
       <a href="#floor-plans" class="hover:text-yellow-400 transition-colors">Floor Plans</a>
-      <a href="#" class="hover:text-yellow-400 transition-colors">Location</a>
-      <a href="#" class="hover:text-yellow-400 transition-colors">Gallery</a>
+      <a href="#location" class="hover:text-yellow-400 transition-colors">Location</a>
+      <a href="#gallery" class="hover:text-yellow-400 transition-colors">Gallery</a>
+      <a href="brochure.pdf" download class="hover:text-yellow-400 transition-colors">
+                        <i class="fa fa-download"></i> Download Brochure
+                    </a>
     </nav>
 
     <button onclick="openModal()" class="bg-yellow-500 hover:bg-yellow-400 text-[#3b0d14] px-5 py-2 rounded-md font-bold transition-colors shadow-md">
@@ -50,7 +54,7 @@
 <!-- ================= HERO ================= -->
 <section class="relative h-[600px]">
   <!-- Placeholder for Hero Image -->
-  <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" 
+  <img src="https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_491,h_4413,w_7356,c_crop/q_auto,f_auto,fl_lossy,g_center,h_1200,w_2000/g5/g5-c-5g13txeqo-mark-taylor-companies-client/g5-cl-1j73ew2zby-the-core-scottsdale/uploads/DSC_7198-Edit-2_1_n06pxw.jpg" 
        alt="Luxury Apartment Building" 
        class="w-full h-full object-cover" />
 
@@ -89,11 +93,11 @@
         </h3>
         <p class="text-sm text-gray-500 mb-6">Register now to avail inaugural offers.</p>
 
-        <form onsubmit="event.preventDefault(); openModal();" class="space-y-4">
-          <input type="text" placeholder="Name" required
+        <form id="hero-form" class="space-y-4">
+          <input type="text" name="Name" placeholder="Name" required
             class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620] transition-colors"/>
 
-          <input type="tel" placeholder="Mobile Number" required
+          <input type="tel" name="Phone" placeholder="Mobile Number" required
             class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620] transition-colors"/>
 
           <button type="submit" class="w-full bg-[#5a1620] hover:bg-[#3b0d14] text-white py-3 rounded font-bold uppercase tracking-wide transition-colors">
@@ -107,7 +111,7 @@
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section class="py-20 bg-white">
+<section id="about" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
     <div class="space-y-6">
@@ -178,7 +182,7 @@
   </div>
 </section>
 
-<!-- ================= FLOOR PLANS (Added Section) ================= -->
+<!-- ================= FLOOR PLANS ================= -->
 <section id="floor-plans" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6">
     <!-- Section Title -->
@@ -199,8 +203,7 @@
       <div class="group relative rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50">
         <!-- Image Container -->
         <div class="aspect-[4/3] overflow-hidden">
-            <!-- Using placeholder images for demo purposes -->
-            <img src="https://images.unsplash.com/photo-1599809275372-b40c7e931627?q=80&w=2070&auto=format&fit=crop" 
+            <img src="floor-plan1.png" 
                alt="3 BHK Floor Plan" 
                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                loading="lazy">
@@ -208,8 +211,8 @@
         
         <!-- Content below image -->
         <div class="p-4 bg-white">
-            <h3 class="text-lg font-bold text-[#5a1620]">3 BHK Premium</h3>
-            <p class="text-sm text-gray-500">1850 Sq. Ft.</p>
+            <h3 class="text-lg font-bold text-[#5a1620]">Ground Floor plan</h3>
+            <!-- <p class="text-sm text-gray-500">1850 Sq. Ft.</p> -->
         </div>
 
         <!-- Overlay with Button (appears on hover) -->
@@ -223,14 +226,14 @@
       <!-- Floor Item 2 -->
       <div class="group relative rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50">
         <div class="aspect-[4/3] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop" 
+            <img src="floor-plan2.png"  
                alt="4 BHK Floor Plan" 
                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                loading="lazy">
         </div>
         <div class="p-4 bg-white">
-            <h3 class="text-lg font-bold text-[#5a1620]">4 BHK Luxury</h3>
-            <p class="text-sm text-gray-500">2450 Sq. Ft.</p>
+            <h3 class="text-lg font-bold text-[#5a1620]">Floors Plans</h3>
+            <!-- <p class="text-sm text-gray-500">2450 Sq. Ft.</p> -->
         </div>
 
         <div class="absolute inset-0 bg-[#5a1620]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
@@ -243,14 +246,14 @@
       <!-- Floor Item 3 -->
       <div class="group relative rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50">
         <div class="aspect-[4/3] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop" 
+            <img src="floor-plan3.png" 
                alt="4.5 BHK Penthouse Floor Plan" 
                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                loading="lazy">
         </div>
         <div class="p-4 bg-white">
-            <h3 class="text-lg font-bold text-[#5a1620]">4.5 BHK Penthouse</h3>
-            <p class="text-sm text-gray-500">3200 Sq. Ft.</p>
+            <h3 class="text-lg font-bold text-[#5a1620]">Floors Plan</h3>
+            <!-- <p class="text-sm text-gray-500">3200 Sq. Ft.</p> -->
         </div>
 
         <div class="absolute inset-0 bg-[#5a1620]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
@@ -264,6 +267,165 @@
   </div>
 </section>
 
+<!-- ================= LOCATION SECTION ================= -->
+<section id="location" class="py-20 bg-[#fdf8f4] border-t border-[#efe6dc]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#5a1620]">
+        Strategic <span class="text-yellow-600">Location</span>
+      </h2>
+      <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Located in the prime Sushant Golf City, connecting you to every significant landmark in Lucknow.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Location List -->
+      <div class="bg-white p-8 rounded-xl shadow-lg lg:col-span-1">
+        <h3 class="text-xl font-bold text-[#5a1620] mb-6 flex items-center gap-2">
+          <span class="text-2xl">📍</span> Nearby Landmarks
+        </h3>
+        <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+            <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-gray-800">Medanta Hospital</p>
+              <p class="text-xs text-gray-500">8 Minutes Drive</p>
+            </div>
+          </li>
+            <li class="flex items-start gap-3">
+            <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-gray-800">HCL IT City</p>
+              <p class="text-xs text-gray-500">9 Minutes Drive</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-gray-800">Phoenix Palassio Mall</p>
+              <p class="text-xs text-gray-500">13 Minutes Drive</p>
+            </div>
+          </li>
+          
+          <li class="flex items-start gap-3">
+            <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-gray-800">Intl. Cricket Stadium</p>
+              <p class="text-xs text-gray-500">13 Minutes Drive</p>
+            </div>
+          </li>
+          
+          <li class="flex items-start gap-3">
+            <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
+            <div>
+              <p class="font-bold text-gray-800">Airport (Amausi)</p>
+              <p class="text-xs text-gray-500">17 Minutes Drive</p>
+            </div>
+          </li>
+        </ul>
+        
+        <!-- <button onclick="openModal()" class="w-full mt-8 border border-[#5a1620] text-[#5a1620] py-2 rounded font-semibold hover:bg-[#5a1620] hover:text-white transition-colors">
+            Download Location Map
+        </button> -->
+      </div>
+
+      <!-- Google Map -->
+      <div class="lg:col-span-2 rounded-xl overflow-hidden shadow-lg h-[400px] lg:h-auto relative">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14245.87327140785!2d81.001374!3d26.793213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3737835c249%3A0xd643ea0674ab903b!2sORO%20Constella!5e0!3m2!1sen!2sus!4v1767945497960!5m2!1sen!2sus" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <!-- Instructions to change map -->
+        <div class="absolute bottom-0 left-0 bg-white/80 p-2 text-[10px] text-gray-500 backdrop-blur-sm">
+           * Replace src in iframe with your Google Maps Embed Link
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY SECTION ================= -->
+<section id="gallery" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#5a1620]">
+        Gallery
+      </h2>
+      <div class="w-20 h-1 bg-yellow-500 mx-auto mt-4"></div>
+      <p class="text-gray-600 mt-4">Glimpses of a luxurious lifestyle.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Image 1 -->
+      <div class="group relative h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop" 
+             alt="Luxury Living Room" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white border border-white px-4 py-1 rounded-full text-sm">Living Room</span>
+        </div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="group relative h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" 
+             alt="Exterior View" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white border border-white px-4 py-1 rounded-full text-sm">Exterior</span>
+        </div>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="group relative h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+        <img src="https://www.bca-furnished-apartments.com/wp-content/uploads/2020/02/03.03HS-cp-Corporate-Apartments-Atlanta-Fully-Equipped-Modern-Kitchen-Chic-Premium-Studios-on-25th_0818_20_43.jpg" 
+             alt="Kitchen" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white border border-white px-4 py-1 rounded-full text-sm">Kitchen</span>
+        </div>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="group relative h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=2070&auto=format&fit=crop" 
+             alt="Bedroom" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white border border-white px-4 py-1 rounded-full text-sm">Bedroom</span>
+        </div>
+      </div>
+
+      <!-- Image 5 -->
+      <div class="group relative h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=2070&auto=format&fit=crop" 
+             alt="Pool Side" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white border border-white px-4 py-1 rounded-full text-sm">Pool Deck</span>
+        </div>
+      </div>
+
+      <!-- Image 6 -->
+      <div class="group relative h-64 overflow-hidden rounded-lg shadow-md cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1995&auto=format&fit=crop" 
+             alt="Lobby" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white border border-white px-4 py-1 rounded-full text-sm">Grand Lobby</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= ENQUIRE FORM ================= -->
 <section class="bg-gradient-to-r from-[#3b0d14] to-[#5a1620] py-20">
   <div class="max-w-4xl mx-auto px-6 text-center">
@@ -272,12 +434,12 @@
     </h2>
     <p class="text-gray-300 mb-8">Leave your details below and our team will get back to you shortly.</p>
 
-    <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');" class="bg-white p-8 rounded-xl shadow-2xl max-w-2xl mx-auto">
+    <form id="enquiry-form" class="bg-white p-8 rounded-xl shadow-2xl max-w-2xl mx-auto">
       <div class="grid md:grid-cols-2 gap-4 mb-4">
-        <input class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620]" placeholder="Name" required/>
-        <input class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620]" placeholder="Phone" required/>
+        <input type="text" name="Name" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620]" placeholder="Name" required/>
+        <input type="tel" name="Phone" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620]" placeholder="Phone" required/>
       </div>
-      <input class="w-full border border-gray-300 p-3 rounded mb-6 focus:outline-none focus:border-[#5a1620]" placeholder="Email Address (Optional)"/>
+      <input type="email" name="Email" class="w-full border border-gray-300 p-3 rounded mb-6 focus:outline-none focus:border-[#5a1620]" placeholder="Email Address (Optional)"/>
 
       <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-[#3b0d14] font-bold py-3 rounded-md transition-colors text-lg">
         Submit Enquiry
@@ -337,17 +499,17 @@
   <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-md p-6 rounded-xl shadow-2xl m-4">
     <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 text-2xl">&times;</button>
     
-    <h3 class="text-2xl font-bold text-[#5a1620] mb-2">Detailed Floor Plans</h3>
-    <p class="text-gray-600 mb-6 text-sm">Please fill your details to view/download the floor plans and brochure.</p>
+    <h3 class="text-2xl font-bold text-[#5a1620] mb-2">Enquire Now</h3>
+    <p class="text-gray-600 mb-6 text-sm">Please fill your details to know more.</p>
     
-    <form onsubmit="event.preventDefault(); alert('Request submitted! Downloading...'); closeModal();" class="space-y-4">
+    <form id="modal-form" class="space-y-4">
       <div>
         <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Name</label>
-        <input type="text" class="w-full border border-gray-300 p-2 rounded focus:border-[#5a1620] outline-none" required>
+        <input type="text" name="Name" class="w-full border border-gray-300 p-2 rounded focus:border-[#5a1620] outline-none" required>
       </div>
       <div>
         <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number</label>
-        <input type="tel" class="w-full border border-gray-300 p-2 rounded focus:border-[#5a1620] outline-none" required>
+        <input type="tel" name="Phone" class="w-full border border-gray-300 p-2 rounded focus:border-[#5a1620] outline-none" required>
       </div>
       <button type="submit" class="w-full bg-[#5a1620] text-white py-3 rounded font-bold hover:bg-[#3b0d14] transition-colors">
         View Now
@@ -376,6 +538,42 @@
     if (event.key === "Escape") {
       closeModal();
     }
+  });
+
+  // ================= GOOGLE SCRIPT SUBMISSION =================
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwClwxRanunqZpGGSxTH9Slce2ffFntzIbxVdPJRQlodExH8mnq7bx66qUmzEAcaCQJ/exec'; // Add your Google App Script URL here
+  const forms = ['hero-form', 'enquiry-form', 'modal-form'];
+
+  forms.forEach(id => {
+      const form = document.getElementById(id);
+      if (form) {
+          form.addEventListener('submit', e => {
+              e.preventDefault();
+
+              // Check Captcha if present
+              if (form.querySelector('.g-recaptcha')) {
+                  const captchaResponse = grecaptcha.getResponse();
+                  if (!captchaResponse) {
+                      alert("Please verify that you are not a robot.");
+                      return;
+                  }
+              }
+
+              // 1. Fire the request in the background
+              // 'keepalive: true' ensures the request completes even after the page redirects
+              if (scriptURL) {
+                fetch(scriptURL, { 
+                    method: 'POST', 
+                    mode: 'no-cors', 
+                    keepalive: true, 
+                    body: new FormData(form) 
+                }).catch(error => console.error('Background submission error:', error));
+              }
+
+              // 2. Redirect immediately without waiting
+              window.location.href = "thank.html";
+          });
+      }
   });
 </script>
 

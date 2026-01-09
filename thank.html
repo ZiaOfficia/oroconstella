@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Oro Constella</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Poppins (Matching Main Site) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oro: {
+                            maroon: '#5a1620',
+                            dark: '#3b0d14',
+                            gold: '#eab308', // yellow-500
+                            cream: '#f6f1ec',
+                            light: '#fdf8f4'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="text-gray-800 bg-oro-cream flex flex-col min-h-screen">
+
+    <!-- Top Bar (Simplified for Contact) -->
+    <div class="bg-oro-dark text-gray-300 text-xs py-2 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="tel:+919108187681" class="hover:text-white transition-colors"><i class="fas fa-phone-alt mr-2 text-oro-gold"></i>+91 91081 87681</a>
+                <a href="mailto:sales@oroconstella.com" class="hidden sm:inline hover:text-white transition-colors"><i class="fas fa-envelope mr-2 text-oro-gold"></i>sales@oroconstella.com</a>
+            </div>
+            <div class="text-oro-gold font-medium uppercase tracking-wider">Sushant Golf City, Lucknow</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-oro-maroon tracking-wide">ORO CONSTELLA</h1>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="index.html" class="text-gray-600 hover:text-oro-maroon transition-colors">Home</a>
+                    <a href="index.html#floor-plans" class="text-gray-600 hover:text-oro-maroon transition-colors">Floor Plans</a>
+                    <a href="index.html" class="bg-oro-gold hover:bg-yellow-600 text-oro-dark px-5 py-2 rounded shadow-md transition-all font-bold">Back to Site</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-20 px-4">
+        <div class="w-full max-w-3xl">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center border-t-4 border-oro-gold">
+                
+                <!-- Icon Placeholder -->
+                <div class="mb-8 flex justify-center">
+                    <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center shadow-inner">
+                        <i class="fas fa-check text-5xl text-green-600"></i>
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-bold text-oro-maroon mb-6">
+                    Thank <span class="text-oro-gold">You!</span>
+                </h1>
+                
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl mx-auto">
+                    We have received your enquiry. Our sales team will review your request and get back to you shortly with the brochure and pricing details.
+                </p>
+
+                <!-- Contact Details Card -->
+                <div class="bg-oro-light rounded-xl p-8 mb-8 border border-oro-gold/20 inline-block w-full max-w-lg">
+                    <h3 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Contact Sales Directly</h3>
+                    <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
+                        <div class="flex items-center justify-center gap-3 group">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-oro-maroon shadow-sm group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <a href="tel:+919108187681" class="font-bold text-gray-800 hover:text-oro-maroon transition-colors">+91 91081 87681</a>
+                        </div>
+                        <div class="flex items-center justify-center gap-3 group">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-oro-maroon shadow-sm group-hover:scale-110 transition-transform">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="mailto:sales@oroconstella.com" class="font-bold text-gray-800 hover:text-oro-maroon transition-colors">sales@oroconstella.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to Home Button -->
+                <div>
+                    <a href="index.html" class="inline-flex items-center justify-center gap-2 bg-oro-maroon hover:bg-oro-dark text-white px-8 py-3.5 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <i class="fas fa-arrow-left text-sm"></i> Back to Home
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-oro-dark text-white pt-10 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                 <h2 class="text-2xl font-bold tracking-wide">ORO CONSTELLA</h2>
+            </div>
+            <p class="text-gray-400 text-sm mb-6">Premium living in Sushant Golf City, Lucknow.</p>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-xs">
+                <p>RERA: UPRERAPB1297814 | &copy; 2024 Oro Constella. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
