@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oro Constella | Luxury Apartments</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-[#f6f1ec] text-gray-800">
+
+<!-- ================= NAVBAR ================= -->
+<header class="bg-gradient-to-r from-[#3b0d14] to-[#5a1620] text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div>
+      <h1 class="text-xl font-bold tracking-wide">ORO CONSTELLA</h1>
+      <p class="text-xs text-yellow-400 uppercase tracking-wider">Sushant Golf City, Lucknow</p>
+    </div>          
+
+    <nav class="hidden md:flex gap-8 text-sm font-medium flex-1 justify-center">
+      <a href="#" class="hover:text-yellow-400 transition-colors">Overview</a>
+      <a href="#" class="hover:text-yellow-400 transition-colors">Amenities</a>
+      <a href="#floor-plans" class="hover:text-yellow-400 transition-colors">Floor Plans</a>
+      <a href="#" class="hover:text-yellow-400 transition-colors">Location</a>
+      <a href="#" class="hover:text-yellow-400 transition-colors">Gallery</a>
+    </nav>
+
+    <button onclick="openModal()" class="bg-yellow-500 hover:bg-yellow-400 text-[#3b0d14] px-5 py-2 rounded-md font-bold transition-colors shadow-md">
+      Enquire Now
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="relative h-[600px]">
+  <!-- Placeholder for Hero Image -->
+  <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" 
+       alt="Luxury Apartment Building" 
+       class="w-full h-full object-cover" />
+
+  <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+
+  <div class="absolute inset-0 flex items-center">
+    <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-10 items-center">
+
+      <!-- Text -->
+      <div class="text-white space-y-6">
+        <div class="inline-block bg-yellow-500 text-[#3b0d14] px-3 py-1 rounded text-sm font-bold">
+          Launching Soon
+        </div>
+        <h2 class="text-5xl md:text-6xl font-bold leading-tight">
+          3 & 4.5 BHK <br/>
+          <span class="text-yellow-400">Luxury Apartments</span>
+        </h2>
+        <p class="text-lg md:text-xl text-gray-200 font-light">
+          Experience premium living in the heart of Sushant Golf City, Lucknow.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-4">
+          <button onclick="openModal()" class="bg-yellow-500 hover:bg-yellow-400 text-[#3b0d14] px-8 py-3 rounded-md font-bold transition-transform transform hover:-translate-y-1 shadow-lg">
+            Get Price List
+          </button>
+          <button onclick="openModal()" class="bg-white/10 backdrop-blur-sm border border-white text-white hover:bg-white hover:text-[#3b0d14] px-8 py-3 rounded-md font-semibold transition-all">
+            Book Site Visit
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Form -->
+      <div class="bg-white rounded-xl shadow-2xl p-8 max-w-md ml-auto hidden md:block border-t-4 border-yellow-500">
+        <h3 class="text-2xl font-bold text-[#5a1620] mb-2">
+          Get Instant Details
+        </h3>
+        <p class="text-sm text-gray-500 mb-6">Register now to avail inaugural offers.</p>
+
+        <form onsubmit="event.preventDefault(); openModal();" class="space-y-4">
+          <input type="text" placeholder="Name" required
+            class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620] transition-colors"/>
+
+          <input type="tel" placeholder="Mobile Number" required
+            class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620] transition-colors"/>
+
+          <button type="submit" class="w-full bg-[#5a1620] hover:bg-[#3b0d14] text-white py-3 rounded font-bold uppercase tracking-wide transition-colors">
+            Request Call Back
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <div class="space-y-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#5a1620]">
+        About Oro Constella
+      </h2>
+      <div class="w-20 h-1 bg-yellow-500"></div>
+      <p class="text-gray-600 leading-relaxed text-lg">
+        Nestled in the pristine environs of Sushant Golf City, Oro Constella represents the pinnacle of urban luxury. 
+        Designed for those who appreciate the finer things in life, our towers offer panoramic views and 
+        exquisite architecture.
+      </p>
+      <p class="text-gray-600 leading-relaxed text-lg">
+        Every corner is crafted to perfection, ensuring a lifestyle that blends modern convenience with 
+        elite comfort. From spacious interiors to world-class amenities, your dream home awaits.
+      </p>
+      
+      <button class="text-[#5a1620] font-bold border-b-2 border-[#5a1620] hover:text-yellow-600 hover:border-yellow-600 transition-colors pb-1">
+        Read More
+      </button>
+    </div>
+
+    <div class="relative">
+      <div class="absolute -inset-4 bg-yellow-500/20 rounded-xl transform rotate-3"></div>
+      <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1984&auto=format&fit=crop" 
+           alt="Building Exterior" 
+           class="relative rounded-xl shadow-2xl w-full object-cover h-[400px]"/>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AMENITIES ================= -->
+<section class="bg-[#fdf8f4] py-20 border-y border-[#efe6dc]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#5a1620] mb-3">
+        World Class Amenities
+      </h2>
+      <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Amenity 1 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center group cursor-pointer">
+        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🏊‍♂️</div>
+        <h3 class="text-lg font-bold text-[#5a1620]">Swimming Pool</h3>
+        <p class="text-sm text-gray-500 mt-2">Lap pool & kids pool</p>
+      </div>
+      <!-- Amenity 2 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center group cursor-pointer">
+        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧒</div>
+        <h3 class="text-lg font-bold text-[#5a1620]">Kid’s Play Area</h3>
+        <p class="text-sm text-gray-500 mt-2">Safe & engaging</p>
+      </div>
+      <!-- Amenity 3 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center group cursor-pointer">
+        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🏋️</div>
+        <h3 class="text-lg font-bold text-[#5a1620]">Gymnasium</h3>
+        <p class="text-sm text-gray-500 mt-2">Fully equipped</p>
+      </div>
+      <!-- Amenity 4 -->
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center group cursor-pointer">
+        <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🏃</div>
+        <h3 class="text-lg font-bold text-[#5a1620]">Jogging Track</h3>
+        <p class="text-sm text-gray-500 mt-2">Lush green path</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLOOR PLANS (Added Section) ================= -->
+<section id="floor-plans" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#5a1620]">
+        Floor <span class="text-yellow-600">Plans</span>
+      </h2>
+      <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Thoughtfully designed layouts that maximize space, natural light, and ventilation.
+      </p>
+    </div>
+
+    <!-- Floor Plan Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Floor Item 1 -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50">
+        <!-- Image Container -->
+        <div class="aspect-[4/3] overflow-hidden">
+            <!-- Using placeholder images for demo purposes -->
+            <img src="https://images.unsplash.com/photo-1599809275372-b40c7e931627?q=80&w=2070&auto=format&fit=crop" 
+               alt="3 BHK Floor Plan" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+               loading="lazy">
+        </div>
+        
+        <!-- Content below image -->
+        <div class="p-4 bg-white">
+            <h3 class="text-lg font-bold text-[#5a1620]">3 BHK Premium</h3>
+            <p class="text-sm text-gray-500">1850 Sq. Ft.</p>
+        </div>
+
+        <!-- Overlay with Button (appears on hover) -->
+        <div class="absolute inset-0 bg-[#5a1620]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+          <button onclick="openModal()" class="bg-yellow-500 hover:bg-white hover:text-[#5a1620] text-[#3b0d14] font-bold py-3 px-6 rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-xl">
+            View Floor Plan
+          </button>
+        </div>
+      </div>
+
+      <!-- Floor Item 2 -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50">
+        <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop" 
+               alt="4 BHK Floor Plan" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+               loading="lazy">
+        </div>
+        <div class="p-4 bg-white">
+            <h3 class="text-lg font-bold text-[#5a1620]">4 BHK Luxury</h3>
+            <p class="text-sm text-gray-500">2450 Sq. Ft.</p>
+        </div>
+
+        <div class="absolute inset-0 bg-[#5a1620]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+          <button onclick="openModal()" class="bg-yellow-500 hover:bg-white hover:text-[#5a1620] text-[#3b0d14] font-bold py-3 px-6 rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-xl">
+            View Floor Plan
+          </button>
+        </div>
+      </div>
+
+      <!-- Floor Item 3 -->
+      <div class="group relative rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50">
+        <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop" 
+               alt="4.5 BHK Penthouse Floor Plan" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+               loading="lazy">
+        </div>
+        <div class="p-4 bg-white">
+            <h3 class="text-lg font-bold text-[#5a1620]">4.5 BHK Penthouse</h3>
+            <p class="text-sm text-gray-500">3200 Sq. Ft.</p>
+        </div>
+
+        <div class="absolute inset-0 bg-[#5a1620]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+          <button onclick="openModal()" class="bg-yellow-500 hover:bg-white hover:text-[#5a1620] text-[#3b0d14] font-bold py-3 px-6 rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-xl">
+            View Floor Plan
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRE FORM ================= -->
+<section class="bg-gradient-to-r from-[#3b0d14] to-[#5a1620] py-20">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-2">
+      Interested in Oro Constella?
+    </h2>
+    <p class="text-gray-300 mb-8">Leave your details below and our team will get back to you shortly.</p>
+
+    <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');" class="bg-white p-8 rounded-xl shadow-2xl max-w-2xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-4 mb-4">
+        <input class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620]" placeholder="Name" required/>
+        <input class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-[#5a1620]" placeholder="Phone" required/>
+      </div>
+      <input class="w-full border border-gray-300 p-3 rounded mb-6 focus:outline-none focus:border-[#5a1620]" placeholder="Email Address (Optional)"/>
+
+      <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-[#3b0d14] font-bold py-3 rounded-md transition-colors text-lg">
+        Submit Enquiry
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#2a090e] text-white py-12 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8 items-center">
+      
+      <!-- Brand / QR -->
+      <div class="flex items-center gap-4">
+        <!-- QR Code Placeholder -->
+        <div class="bg-white p-2 rounded">
+           <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=OroConstella" alt="QR Code" class="w-20 h-20"/>
+        </div>
+        <div>
+           <h4 class="font-bold text-lg">ORO CONSTELLA</h4>
+           <p class="text-xs text-gray-400">Scan to save contact</p>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="text-center">
+        <p class="text-lg font-semibold text-yellow-400 mb-1">Contact Us</p>
+        <p class="text-2xl font-bold">📞 +91 91081 87681</p>
+        <p class="text-sm text-gray-400 mt-2">sales@oroconstella.com</p>
+      </div>
+
+      <!-- Legal -->
+      <div class="text-right">
+        <p class="text-sm text-gray-300 mb-1">
+          RERA: <span class="text-yellow-400 font-mono">UPRERAPB1297814</span>
+        </p>
+        <p class="text-sm text-gray-400 leading-tight">
+          Branch: SBI Gomti Nagar Ext.<br/>
+          Lucknow, Uttar Pradesh
+        </p>
+      </div>
+    </div>
+    
+    <div class="mt-10 pt-6 border-t border-white/10 text-center text-xs text-gray-500">
+        &copy; 2024 Oro Constella. All rights reserved. | Privacy Policy
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MODAL POPUP ================= -->
+<div id="enquireModal" class="fixed inset-0 z-[100] hidden">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal()"></div>
+  
+  <!-- Modal Content -->
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-md p-6 rounded-xl shadow-2xl m-4">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 text-2xl">&times;</button>
+    
+    <h3 class="text-2xl font-bold text-[#5a1620] mb-2">Detailed Floor Plans</h3>
+    <p class="text-gray-600 mb-6 text-sm">Please fill your details to view/download the floor plans and brochure.</p>
+    
+    <form onsubmit="event.preventDefault(); alert('Request submitted! Downloading...'); closeModal();" class="space-y-4">
+      <div>
+        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Name</label>
+        <input type="text" class="w-full border border-gray-300 p-2 rounded focus:border-[#5a1620] outline-none" required>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number</label>
+        <input type="tel" class="w-full border border-gray-300 p-2 rounded focus:border-[#5a1620] outline-none" required>
+      </div>
+      <button type="submit" class="w-full bg-[#5a1620] text-white py-3 rounded font-bold hover:bg-[#3b0d14] transition-colors">
+        View Now
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    const modal = document.getElementById('enquireModal');
+    modal.classList.remove('hidden');
+    // Prevent body scrolling
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('enquireModal');
+    modal.classList.add('hidden');
+    // Restore body scrolling
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+</script>
+
+</body>
+</html>
